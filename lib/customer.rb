@@ -16,4 +16,8 @@ class Customer
   def new_meal(waiter, total, tip)
     return Meal.new(waiter, self, total, tip)
   end
+  
+  def meals
+    return Meal.all.select { |meal| meal.customer == self }
+  end
 end
