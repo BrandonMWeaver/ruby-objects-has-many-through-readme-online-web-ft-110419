@@ -20,4 +20,11 @@ class Waiter
   def meals
     return Meal.all.select { |meal| meal.waiter == self }
   end
+  
+  def best_tipper
+    best = meals.max { |meal_a, meal_b|
+      meal_a.tip <=> meal_b.tip
+    }
+    return best.customer
+  end
 end
