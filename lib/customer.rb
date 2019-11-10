@@ -22,6 +22,6 @@ class Customer
   end
   
   def waiters
-    return Waiter.all.select { |waiter| waiter.customer ==
+    return Meal.all.select { |meal| meal. ==
   end
 end
