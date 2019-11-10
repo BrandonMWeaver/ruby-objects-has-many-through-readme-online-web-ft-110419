@@ -12,4 +12,8 @@ class Waiter
   def self.all
     return @@all
   end
+  
+  def new_meal(customer, total, tip)
+    
+  end
 end
